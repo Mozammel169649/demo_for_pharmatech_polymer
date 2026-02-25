@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmatech Polymer Industries Ltd</title>
+    <link rel="icon" type="image/png" href="./image/business_logo.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand-red: #C1121F;
+            --brand-dark: #020617;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(2, 6, 23, 0.9) 10%, rgba(2, 6, 23, 0.4) 100%);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-border {
+            border-right: 1px solid rgba(226, 232, 240, 1);
+        }
+
+        @media (max-width: 768px) {
+            .stat-border {
+                border-right: none;
+                border-bottom: 1px solid rgba(226, 232, 240, 1);
+                padding-bottom: 1rem;
+            }
+        }
+
+        .product-hover:hover img {
+            transform: scale(1.1);
+        }
+
+        .btn-premium {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(30, 64, 175, 0.5);
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .trust-card:hover .bg-overlay-image {
+            transform: scale(1.1);
+            filter: blur(0.5px) brightness(0.7);
+        }
+
+        .trust-card .bg-overlay-image {
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Premium Navigation -->
+    <nav class="fixed w-full z-[100] glass-header py-4 transition-all" id="navbar">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-red-700 flex items-center justify-center rounded-xl shadow-lg shadow-red-200">
+                    <img src="./image/business_logo.webp" alt="logo">
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-slate-950 leading-none">
+                        PHARMATECH
+                    </h1>
+                    <p class="text-[10px] font-bold text-red-700 tracking-[0.3em] uppercase">
+                        Polymer Industries
+                    </p>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#facilities" class="nav-link">Facilities</a>
+                <a href="#quality" class="nav-link">Quality</a>
+                <a href="#capability" class="nav-link">Factory</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+                <a href="#contact"
+                    class="bg-slate-950 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-red-700 transition-all shadow-xl shadow-slate-200">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="lg:hidden text-slate-900" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-white/95 backdrop-blur-xl shadow-xl border-t border-slate-200">
+            <div class="flex flex-col px-6 py-6 gap-6 text-center">
+                <a href="#about" class="mobile-link">About</a>
+                <a href="#products" class="mobile-link">Products</a>
+                <a href="#facilities" class="mobile-link">Facilities</a>
+                <a href="#quality" class="mobile-link">Quality</a>
+                <a href="#capability" class="mobile-link">Factory</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+
+                <a href="#contact"
+                    class="bg-red-700 text-white py-3 rounded-full text-sm font-bold uppercase tracking-widest">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Bold & Wide) -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="./image/madical.jpg" class="w-full h-full object-cover" alt="Industrial Backdrop">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="max-w-[1440px] mx-auto px-4 lg:px-12 relative z-10 w-full">
+            <div class="max-w-4xl reveal active">
+                <div
+                    class="inline-block bg-red-600/20 backdrop-blur-md border border-red-500/30 text-red-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 ">
+                    Manufacturing Excellence since 2015
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-6xl font-bold text-white leading-[1] mb-4 mt-4 tracking-tight">
+                    Precision <span class="text-red-500">Plastic</span> Solutions for Global Markets.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                    Engineering high-performance Injection & Blow Molding packaging for Pharmaceutical, FMCG, and Food
+                    industries. Export-standard quality, delivered at scale.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 mb-5">
+                    <a href="#contact"
+                        class="btn-premium bg-red-600 text-white px-10 py-5 rounded-2xl font-extrabold text-sm uppercase tracking-widest flex items-center justify-center gap-3">
+                        Request a Quote
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#capability"
+                        class="btn-premium bg-white/10 backdrop-blur-lg border border-white/20 text-white px-10 py-5 rounded-2xl font-extrabold text-sm uppercase tracking-widest flex items-center justify-center">
+                        Explore Capabilities
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client SECTION -->
+    <section id="clients" class="pt-12 pb-12 bg-white relative overflow-hidden" style="isolation: isolate;">
+
+        <!-- Background Decorations -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-red-50 rounded-full blur-[120px] -z-10 opacity-60">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-100 rounded-full blur-[120px] -z-10 opacity-60">
+        </div>
+
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-6xl font-black text-black tracking-tighter uppercase italic">Our <span
+                        class="text-[#E31E24]">Clients</span></h2>
+                <p class="mt-4 text-slate-500 font-medium max-w-2xl mx-auto italic text-sm">Proudly serving 100+
+                    pharmaceutical giants with high-precision packaging solutions.</p>
+                <div class="w-20 h-1 bg-[#E31E24] mx-auto mt-6"></div>
+            </div>
+
+            <!-- Marquee Container -->
+            <div class="relative w-full overflow-hidden">
+                <!-- Fade Edges -->
+                <div
+                    class="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
+                </div>
+
+                <!-- The Scrolling Loop -->
+                <div style="display: flex; width: max-content; animation: marquee 35s linear infinite;"
+                    onmouseover="this.style.animationPlayState='paused'"
+                    onmouseout="this.style.animationPlayState='running'">
+
+                    <!-- Set 1 -->
+                    <div class="flex items-center gap-12 md:gap-20 px-10">
+                        <!-- Acme -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Acme_Laboratories_Logo.png"
+                                style="height: 45px; object-contain;" alt="Acme">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">The
+                                Acme Laboratories</span>
+                        </div>
+                        <!-- General -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/2/23/General_Pharmaceuticals_Ltd._Logo.png"
+                                style="height: 45px; object-contain;" alt="General">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">General
+                                Pharma</span>
+                        </div>
+                        <!-- Square -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=SQUARE" style="height: 45px; object-contain;"
+                                alt="Square">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Square
+                                Pharmaceuticals</span>
+                        </div>
+                        <!-- Beximco -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=BEXIMCO" style="height: 45px; object-contain;"
+                                alt="Beximco">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Beximco
+                                Pharma</span>
+                        </div>
+                        <!-- Renata -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=RENATA" style="height: 45px; object-contain;"
+                                alt="Renata">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Renata
+                                Limited</span>
+                        </div>
+                        <!-- Incepta -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=INCEPTA" style="height: 45px; object-contain;"
+                                alt="Incepta">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Incepta
+                                Pharma</span>
+                        </div>
+                        <!-- Ziska -->
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=ZISKA" style="height: 45px; object-contain;"
+                                alt="Ziska">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Ziska
+                                Pharma</span>
+                        </div>
+                    </div>
+
+                    <!-- Set 2 (Duplicate for Seamless Loop) -->
+                    <div class="flex items-center gap-12 md:gap-20 px-10">
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Acme_Laboratories_Logo.png"
+                                style="height: 45px; object-contain;" alt="Acme">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">The
+                                Acme Laboratories</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/2/23/General_Pharmaceuticals_Ltd._Logo.png"
+                                style="height: 45px; object-contain;" alt="General">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">General
+                                Pharma</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=SQUARE" style="height: 45px; object-contain;"
+                                alt="Square">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Square
+                                Pharmaceuticals</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=BEXIMCO" style="height: 45px; object-contain;"
+                                alt="Beximco">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Beximco
+                                Pharma</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=RENATA" style="height: 45px; object-contain;"
+                                alt="Renata">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Renata
+                                Limited</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=INCEPTA" style="height: 45px; object-contain;"
+                                alt="Incepta">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Incepta
+                                Pharma</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 transition-all duration-300"
+                            style="opacity: 0.6; filter: grayscale(100%); transform: scale(1);"
+                            onmouseover="this.style.opacity='1'; this.style.filter='grayscale(0)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.opacity='0.6'; this.style.filter='grayscale(100%)'; this.style.transform='scale(1)';">
+                            <img src="https://placehold.co/100x45?text=ZISKA" style="height: 45px; object-contain;"
+                                alt="Ziska">
+                            <span
+                                style="font-size: 9px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">Ziska
+                                Pharma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer of Section -->
+            <div class="mt-12 flex flex-col items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="h-[1px] w-12 bg-slate-200"></div>
+                    <span
+                        class="px-5 py-2 bg-black text-white rounded-full text-[9px] font-black uppercase tracking-[0.3em]">Over
+                        100+ Global Partners</span>
+                    <div class="h-[1px] w-12 bg-slate-200"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STATS SECTION -->
+    <section
+        class="bg-white py-12 border-2 border-red-500 border-y border-slate-100 shadow-inner relative z-20 overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Card 1: Experience -->
+                <div
+                    class="trust-card group relative overflow-hidden bg-slate-900 p-8 rounded-[2.5rem] flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 border border-slate-200">
+                    <!-- Blur Background Image -->
+                    <div
+                        class="bg-overlay-image absolute inset-0 bg-[url('./image/experence.png')] bg-cover bg-center opacity-40 blur-[2px]">
+                    </div>
+                    <!-- Content Overlay -->
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl mb-5 shadow-sm group-hover:bg-[#E31E24] group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="history" class="w-6 h-6 text-[#E31E24] group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black text-white mb-2 tracking-tighter">15+</span>
+                        <span
+                            class="text-[11px] font-black text-slate-200 uppercase tracking-[0.25em] bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">Years
+                            Experience</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Monthly Output -->
+                <div
+                    class="trust-card group relative overflow-hidden bg-slate-900 p-8 rounded-[2.5rem] flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 border border-slate-200">
+                    <div
+                        class="bg-overlay-image absolute inset-0 bg-[url('./image/monthlyproduction.png')] bg-cover bg-center opacity-40 blur-[2px]">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl mb-5 shadow-sm group-hover:bg-[#E31E24] group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="package-check" class="w-6 h-6 text-[#E31E24] group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black text-white mb-2 tracking-tighter">1.2M+</span>
+                        <span
+                            class="text-[11px] font-black text-slate-200 uppercase tracking-[0.25em] bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">Monthly
+                            Output</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Waste Goal -->
+                <div
+                    class="trust-card group overflow-hidden relative bg-slate-900 p-8 rounded-[2.5rem] flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 border border-slate-200">
+                    <div
+                        class="bg-overlay-image  absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center opacity-40 blur-[2px]">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl mb-5 shadow-sm group-hover:bg-[#E31E24] group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="leaf" class="w-6 h-6 text-[#E31E24] group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black text-white mb-2 tracking-tighter">0%</span>
+                        <span
+                            class="text-[11px] font-black text-slate-200 uppercase tracking-[0.25em] bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">Waste
+                            Goal</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: ISO -->
+                <div
+                    class="trust-card group relative overflow-hidden bg-slate-900 p-8 rounded-[2.5rem] flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 border border-slate-200">
+                    <div
+                        class="bg-overlay-image absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center opacity-40 blur-[2px]">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl mb-5 shadow-sm group-hover:bg-[#E31E24] group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-[#E31E24] group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black text-white mb-2 tracking-tighter italic uppercase">ISO</span>
+                        <span
+                            class="text-[11px] font-black text-slate-200 uppercase tracking-[0.25em] bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">9001:2015
+                            Registered</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Products Section (Inline Tailwind CSS) -->
+    <section id="products" class="pt-16 pb-16 px-6 lg:px-12 max-w-[1440px] mx-auto">
+
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-l-8 border-[#E31E24] pl-6">
+            <div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-black tracking-tighter uppercase mb-2">Our Products
+                </h2>
+                <p class="text-slate-500 font-bold uppercase tracking-[0.2em] text-sm">Primary Packaging for
+                    Pharmaceuticals</p>
+            </div>
+            <div class="mt-6 md:mt-0 flex gap-4">
+                <button
+                    class="bg-gradient-to-br from-[#E31E24] to-[#a31418] text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg shadow-red-200 hover:scale-105 transition-transform">
+                    Export Quality
+                </button>
+            </div>
+        </div>
+
+        <!-- 12 Products Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+
+            <!-- Product Loop (12 Items) -->
+            <!-- 1. Eye Dropper -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=400"
+                        alt="Eye Dropper"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Eye Dropper
+                </div>
+            </div>
+
+            <!-- 2. Nasal Dropper -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="./image/nasalspray.jpg" alt="Nasal Dropper"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Nasal Dropper
+                </div>
+            </div>
+
+            <!-- 3. Baby Dropper -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
+                        alt="Baby Dropper"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Baby Dropper
+                </div>
+            </div>
+
+            <!-- 4. PET Liquid Bottles -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="./image/PET Liquid Bottles.jpg" alt="PET Liquid Bottles"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    PET Liquid Bottles
+                </div>
+            </div>
+
+            <!-- 5. Dry Syrup Bottles -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=400"
+                        alt="Dry Syrup Bottles"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Dry Syrup Bottles
+                </div>
+            </div>
+
+            <!-- 6. Pill Container -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="./image/Pill Container.jpg" alt="Pill Container"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Pill Container
+                </div>
+            </div>
+
+            <!-- 7. Ice Pack Container -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=400"
+                        alt="Ice Pack"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Ice Pack Container
+                </div>
+            </div>
+
+            <!-- 8. Antiseptic Container -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="./image/Antiseptic Container.jpg" alt="Antiseptic"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Antiseptic Container
+                </div>
+            </div>
+
+            <!-- 9. Measuring Cup & Spoon -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+                        alt="Measuring Cup"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Measuring Cup & Spoon
+                </div>
+            </div>
+
+            <!-- 10. Vaccine Tray Packaging -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=400"
+                        alt="Vaccine Tray"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Vaccine Tray Packaging
+                </div>
+            </div>
+
+            <!-- 11. Dialysis Container -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="./image/Dialysis Container.jpg" alt="Dialysis"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Dialysis Container
+                </div>
+            </div>
+
+            <!-- 12. Supplementary Packaging -->
+            <div
+                class="group relative bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-100 hover:border-[#E31E24]">
+                <div class="aspect-square p-6 flex items-center justify-center bg-white border-b-4 border-[#E31E24]">
+                    <img src="./image/Supplementary Packaging.jpg" alt="Supplementary"
+                        class="max-h-[85%] w-auto transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div
+                    class="bg-[#E31E24] text-white font-extrabold py-3 text-center uppercase text-[0.85rem] tracking-wider">
+                    Supplementary Packaging
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- QUALITY ASSURANCE SECTION -->
+    <section id="quality" class="py-16 bg-white overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-black text-black uppercase tracking-tighter">Quality <span
+                        class="text-[#E31E24]">Assurance</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="p-10 bg-slate-50 rounded-[3rem] border border-slate-100">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl shadow-md mx-auto mb-6 flex items-center justify-center text-[#E31E24]">
+                        <i data-lucide="check-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-black uppercase text-sm mb-4">Superior Quality</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Endlessly providing clients with superior quality
+                        of injection and blow molding plastic products.</p>
+                </div>
+                <div class="p-10 bg-black rounded-[3rem] text-white transform md:-translate-y-6 shadow-2xl">
+                    <div
+                        class="w-14 h-14 bg-[#E31E24] rounded-2xl mx-auto mb-6 flex items-center justify-center text-white">
+                        <i data-lucide="settings" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-black uppercase text-sm mb-4 italic">Customization</h4>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Catering to diverse needs with individual planning
+                        and commitments as per demands.</p>
+                </div>
+                <div class="p-10 bg-slate-50 rounded-[3rem] border border-slate-100">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl shadow-md mx-auto mb-6 flex items-center justify-center text-[#E31E24]">
+                        <i data-lucide="truck" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-black uppercase text-sm mb-4">On-Time Delivery</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Adherence to delivery schedules and bulk order
+                        handling earned us loyalty across the country.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Facilities Section -->
+    <section id="facilities" class="py-16 bg-black text-white overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+                <!-- Left Content: Title and Main Description -->
+                <div class="lg:w-1/2">
+                    <div
+                        class="inline-block bg-[#E31E24] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-[0.3em]">
+                        Excellence in Production</div>
+                    <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter leading-none mb-8">Our <span
+                            class="text-[#E31E24]">Facilities</span></h2>
+
+                    <p class="text-slate-300 text-lg leading-relaxed mb-10 border-l-4 border-[#E31E24] pl-6 italic">
+                        "We offer a wide array of Cosmetic Packaging solutions such as cosmetics packaging container,
+                        cosmetics packaging cap, Flip Top Caps, Hair Oil Bottles, Deodrant Bottle Caps and Powder
+                        Containers."
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-[#E31E24] p-3 rounded-lg"><i data-lucide="package-check"
+                                    class="w-6 h-6 text-white"></i></div>
+                            <div>
+                                <h4 class="font-bold text-xl uppercase mb-1">Customized Design</h4>
+                                <p class="text-slate-400 text-sm">Designed keeping in mind the appeal of retail
+                                    customers with a variety of sizes, shapes, and designs.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-[#E31E24] p-3 rounded-lg"><i data-lucide="factory"
+                                    class="w-6 h-6 text-white"></i></div>
+                            <div>
+                                <h4 class="font-bold text-xl uppercase mb-1">Post Molding Expertise</h4>
+                                <p class="text-slate-400 text-sm">Our expertise lies in supporting the demands of post
+                                    molding like shrink sleeving for products.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-[#E31E24] p-3 rounded-lg"><i data-lucide="layers"
+                                    class="w-6 h-6 text-white"></i></div>
+                            <div>
+                                <h4 class="font-bold text-xl uppercase mb-1">Complete Solutions</h4>
+                                <p class="text-slate-400 text-sm">Providing end-to-end complete packaging solutions for
+                                    all your industrial needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: Feature Grid with Visual Appeal -->
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <div
+                        class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-[#E31E24] transition-colors group">
+                        <div class="text-[#E31E24] mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="sparkles" class="w-10 h-10"></i>
+                        </div>
+                        <h5 class="font-black uppercase text-xs tracking-widest mb-2">Aesthetic Appeal</h5>
+                        <p class="text-zinc-500 text-[11px] leading-tight">Focusing on customer-centric visual design.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 translate-y-8 hover:border-[#E31E24] transition-colors group">
+                        <div class="text-[#E31E24] mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="shrink" class="w-10 h-10"></i>
+                        </div>
+                        <h5 class="font-black uppercase text-xs tracking-widest mb-2">Shrink Sleeving</h5>
+                        <p class="text-zinc-500 text-[11px] leading-tight">Expert post-molding support for branding.</p>
+                    </div>
+                    <div
+                        class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-[#E31E24] transition-colors group">
+                        <div class="text-[#E31E24] mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="flask-conical" class="w-10 h-10"></i>
+                        </div>
+                        <h5 class="font-black uppercase text-xs tracking-widest mb-2">Chemical Resistance</h5>
+                        <p class="text-zinc-500 text-[11px] leading-tight">High quality polymer materials for safety.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 translate-y-8 hover:border-[#E31E24] transition-colors group">
+                        <div class="text-[#E31E24] mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="expand" class="w-10 h-10"></i>
+                        </div>
+                        <h5 class="font-black uppercase text-xs tracking-widest mb-2">Diverse Range</h5>
+                        <p class="text-zinc-500 text-[11px] leading-tight">Variety of sizes, shapes, and container
+                            types.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIAL CAPABILITY SECTION -->
+    <section id="capability" class="py-16 text-white relative overflow-hidden bg-slate-900"
+        style="background-image: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+        <!-- Red Glow Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#E31E24]/10 to-transparent pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-24">
+                <span
+                    class="text-[#E31E24] font-black uppercase tracking-[0.4em] text-xs block mb-6 bg-black/40 inline-block px-4 py-2 rounded-full backdrop-blur-sm">Manufacturing
+                    Power</span>
+                <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter mb-6">Industrial Grade <span
+                        class="text-red-600">Capability.</span></h2>
+                <p
+                    class="text-slate-200 max-w-2xl mx-auto text-lg italic border-b-2 border-[#E31E24]/40 pb-6 drop-shadow-lg">
+                    Our factory is equipped with high-tonnage machines and automated robotic arms for maximum efficiency
+                    and precision.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="p-10 dark-glass rounded-[2.5rem] border border-white/10 hover:border-[#E31E24]/50 transition-all group hover:bg-black/80">
+                    <div
+                        class="w-16 h-16 bg-[#E31E24]/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#E31E24] transition-all group-hover:scale-110 shadow-lg shadow-red-900/20">
+                        <i data-lucide="cog" class="w-8 h-8 text-[#E31E24] group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tight mb-4 italic">Injection Molding</h4>
+                    <p class="text-slate-300 leading-relaxed text-sm">High-cavity molds for mass production of caps,
+                        measuring cups, and specialized closures with zero deviation.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="p-10 dark-glass rounded-[2.5rem] border border-white/10 hover:border-[#E31E24]/50 transition-all group transform lg:translate-y-4 hover:bg-black/80">
+                    <div
+                        class="w-16 h-16 bg-[#E31E24]/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#E31E24] transition-all group-hover:scale-110 shadow-lg shadow-red-900/20">
+                        <i data-lucide="layers" class="w-8 h-8 text-[#E31E24] group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tight mb-4 italic">Extrusion Blow Molding</h4>
+                    <p class="text-slate-300 leading-relaxed text-sm">Advanced EBM technology for high-strength bottles
+                        with uniform wall thickness across all sizes (5ml to 5L).</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="p-10 dark-glass rounded-[2.5rem] border border-white/10 hover:border-[#E31E24]/50 transition-all group hover:bg-black/80">
+                    <div
+                        class="w-16 h-16 bg-[#E31E24]/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#E31E24] transition-all group-hover:scale-110 shadow-lg shadow-red-900/20">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-[#E31E24] group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tight mb-4 italic">Strict QC Protocols</h4>
+                    <p class="text-slate-300 leading-relaxed text-sm">Real-time online inspection, batch tracking, and
+                        in-house laboratory testing for guaranteed pharmaceutical standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="relative py-16 overflow-hidden bg-[#020617]">
+        
+        <!-- Decorative Glows -->
+        <div class="absolute top-0 -right-20 w-[400px] h-[400px] bg-[#C1121F] opacity-[0.08] blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-0 -left-20 w-[400px] h-[400px] bg-[#C1121F] opacity-[0.08] blur-[120px] rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left: Visual Content -->
+                <div class="relative">
+                    <!-- Main Image Frame -->
+                    <div class="relative group rounded-[3rem] p-3 border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-[#C1121F]/30">
+                        <div class="overflow-hidden rounded-[2.5rem]">
+                            <img src="./image/group.png" 
+                                 class="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105" 
+                                 alt="Factory Production">
+                        </div>
+                        
+                        <!-- Floating Experience Card -->
+                        <div class="absolute -bottom-10 -left-10 md:-left-10 bg-[#C1121F] text-white p-8 rounded-3xl shadow-2xl shadow-[#C1121F]/30 animate-float border-4 border-[#020617]">
+                            <div class="text-4xl font-extrabold tracking-tighter">10+</div>
+                            <div class="text-[10px] uppercase font-bold tracking-[0.2em] opacity-90 mt-1 whitespace-nowrap">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Badge -->
+                    <div class="absolute top-10 -right-4 md:-right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl hidden md:block transition-all hover:bg-white/15">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#C1121F]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold text-sm">Certified Quality</p>
+                                <p class="text-white/60 text-[10px]">ISO 9001:2015 Compliant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#C1121F]/10 border border-[#C1121F]/20">
+                        <div class="flex gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#C1121F]"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#C1121F] opacity-50"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#C1121F] opacity-20"></span>
+                        </div>
+                        <span class="text-[#C1121F] font-bold text-xs tracking-widest uppercase">Our Story Since 2015</span>
+                    </div>
+
+                    <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1]">
+                        Pioneering <span class="text-[#C1121F]">Plastic</span> Innovation in Bangladesh
+                    </h2>
+
+                    <p class="text-slate-400 text-lg leading-relaxed max-w-xl">
+                        At <span class="text-white font-semibold">Pharmatech Polymer</span>, we don't just manufacture plastic; we engineer solutions. Our commitment to high-precision molding and sustainable practices has made us a leader in the industrial packaging sector.
+                    </p>
+
+                    <!-- Feature Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="group p-6 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-[#C1121F]/5 hover:border-[#C1121F]/20">
+                            <div class="w-10 h-10 rounded-lg bg-[#C1121F]/20 flex items-center justify-center text-[#C1121F] mb-4 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </div>
+                            <h4 class="text-white font-bold mb-2">High Precision</h4>
+                            <p class="text-slate-500 text-sm">Micro-level accuracy in every mold we produce.</p>
+                        </div>
+
+                        <div class="group p-6 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-[#C1121F]/5 hover:border-[#C1121F]/20">
+                            <div class="w-10 h-10 rounded-lg bg-[#C1121F]/20 flex items-center justify-center text-[#C1121F] mb-4 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            </div>
+                            <h4 class="text-white font-bold mb-2">Eco Durability</h4>
+                            <p class="text-slate-500 text-sm">Combining long-lasting strength with recyclable materials.</p>
+                        </div>
+                    </div>
+
+                    <!-- Leadership Quote -->
+                    <div class="flex items-center gap-5 p-6 rounded-3xl bg-gradient-to-r from-white/5 to-transparent border-l-4 border-[#C1121F]">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 rounded-2xl bg-[#020617] border border-white/10 flex items-center justify-center text-[#C1121F] text-xl font-bold"><img src="./image/neaz_1.jpg" alt="M.D"></div>
+                        </div>
+                        <div>
+                            <p class="text-white/80 text-sm italic font-medium leading-relaxed">"Quality is not an act, it is a habit we've nurtured for a decade."</p>
+                            <p class="text-white font-bold text-xs uppercase tracking-widest mt-2">— Md. Neaz Morshed, MD</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact With Us Section (NEW) -->
+    <section id="contact" class="py-16 bg-slate-100 overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center mb-16 border-r-8 border-[#E31E24] pr-6 text-right">
+                <div class="w-full">
+                    <span class="text-[#E31E24] font-black uppercase tracking-[0.4em] text-xs">Get In Touch</span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-black uppercase tracking-tighter mt-2">Contact With
+                        Us</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-10 lg:p-14 rounded-[3rem] shadow-xl border border-slate-200">
+                    <h3 class="text-3xl font-black uppercase mb-10 tracking-tighter">Contact <span
+                            class="text-[#E31E24]">With Us</span></h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Your Name"
+                                class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl text-xs outline-none focus:border-[#E31E24]">
+                            <input type="email" required placeholder="Email Address"
+                                class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl text-xs outline-none focus:border-[#E31E24]">
+                        </div>
+                        <input type="text" placeholder="Subject"
+                            class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl text-xs outline-none focus:border-[#E31E24]">
+                        <textarea rows="4" required placeholder="Your Message"
+                            class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl text-xs outline-none focus:border-[#E31E24]"></textarea>
+                        <button
+                            class="w-full red-gradient-bg text-white bg-red-600 font-black uppercase py-5 rounded-xl text-xs tracking-[0.2em] shadow-lg shadow-red-200 hover:scale-[1.02] transition-all">Send
+                            Message Via Mail</button>
+                    </form>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="bg-black text-white p-10 rounded-[3rem] border-b-8 border-[#E31E24]">
+                        <h4 class="font-black text-xl italic uppercase mb-4 tracking-tighter">Head <span
+                                class="text-[#E31E24]">Office</span></h4>
+                        <div class="space-y-4 text-xs font-bold text-slate-400">
+                            <p class="flex items-center gap-3"><i data-lucide="map-pin"
+                                    class="text-[#E31E24] w-4 h-4"></i> 2/9, BLOCK#A, LALMATIA, DHAKA-1207.</p>
+                            <p class="flex items-center gap-3"><i data-lucide="phone"
+                                    class="text-[#E31E24] w-4 h-4"></i> Mobile: +880 1XXX-XXXXXX</p>
+                            <p class="flex items-center gap-3"><i data-lucide="mail"
+                                    class="text-[#E31E24] w-4 h-4 text-xs italic"></i> info@pharmatechpolymer.com</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex-grow bg-white rounded-[3rem] shadow-lg overflow-hidden border border-slate-200 h-64 lg:h-auto">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d813.4614186639884!2d90.3665478213218!3d23.75316841134648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1771482428063!5m2!1sen!2sbd"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION (MODERATED) -->
+    <footer class="bg-slate-50 pt-16 border-t-4 border-[#E31E24]">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
+                <!-- Part 1: Identity -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-[#E31E24] flex items-center justify-center rounded-lg text-white font-black text-xl shadow-md">
+                            P</div>
+                        <h2 class="text-2xl font-black tracking-tighter text-black uppercase italic">Pharmatech <span
+                                class="text-[#E31E24]">Polymer</span></h2>
+                    </div>
+                    <p class="text-slate-500 text-xs leading-relaxed font-bold">Leading manufacturer of injection and
+                        blow molding plastic products for the pharmaceutical industry.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-[#E31E24] hover:bg-[#E31E24] hover:text-white transition-all"><i
+                                data-lucide="facebook" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-[#E31E24] hover:bg-[#E31E24] hover:text-white transition-all"><i
+                                data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Part 2: Quick Links & Certs -->
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-black text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-8">Navigation
+                        </h4>
+                        <ul class="space-y-4 font-black text-slate-600 text-[11px] uppercase tracking-widest">
+                            <li><a href="#about" class="hover:text-[#E31E24] transition-colors">About</a></li>
+                            <li><a href="#products" class="hover:text-[#E31E24] transition-colors">Products</a></li>
+                            <li><a href="#facilities" class="hover:text-[#E31E24] transition-colors">Facilities</a></li>
+                            <li><a href="#quality" class="hover:text-[#E31E24] transition-colors">Quality</a></li>
+                            <li><a href="#capability" class="hover:text-[#E31E24] transition-colors">Capability</a></li>
+                            <li><a href="#contact" class="hover:text-[#E31E24] transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-8">Certifications
+                        </h4>
+                        <div class="space-y-2">
+                            <div
+                                class="px-3 py-2 bg-white border border-slate-200 rounded text-[9px] font-black uppercase text-slate-400 text-center">
+                                ISO 9001:2015</div>
+                            <div
+                                class="px-3 py-2 bg-white border border-slate-200 rounded text-[9px] font-black uppercase text-slate-400 text-center">
+                                GMP COMPLIANT</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part 3: Location Map -->
+                <div>
+                    <h4 class="font-black text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-8">Factory Location
+                    </h4>
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl h-40 group border-2 border-white">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.685935394236!2d90.6443425753416!3d23.936233181467406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c967677d2f97%3A0xc6c766e4a64d142!2sPaiksa%2C%20Palash%2C%20Narsingdi!5e0!3m2!1sen!2sbd!4v1710000000000!5m2!1sen!2sbd"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <a href="https://maps.app.goo.gl/TPJBRPT4gqDYwCJX9" target="_blank"
+                            class="absolute bottom-2 right-2 bg-[#E31E24] text-white p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"><i
+                                data-lucide="map-pinned" class="w-4 h-4"></i></a>
+                    </div>
+                    <p class="mt-4 text-[10px] font-bold text-slate-500 uppercase tracking-tight">Paiksa, Palas
+                        Ghorashal, Narshingdi.</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-black border-t-2 border-[#E31E24] text-center">
+            <div class="max-w-[1440px] mx-auto px-6 py-4">
+                <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                    © 2024 Pharmatech Polymer Industries Ltd. | Paiksa, Palash, Narsingdi-1610
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        }
+        // Reveal on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Initial check
+
+        // Smooth Navbar Shrink
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 80) {
+                nav.classList.add('py-2', 'shadow-2xl');
+            } else {
+                nav.classList.remove('py-2', 'shadow-2xl');
+            }
+        });
+    </script>
+</body>
+
+</html>
